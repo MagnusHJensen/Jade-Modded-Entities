@@ -1,0 +1,9 @@
+{
+  "config.jade.plugin_jademoddedentities.swem": "SWEM",
+  "config.jade.plugin_jademoddedentities.swem.levels": "Show levels",
+  "config.jade.plugin_jademoddedentities.swem.gender": "Show gender",
+  "config.jade.plugin_jademoddedentities.swem.hide_default": "Hide Minecraft defaults",
+
+  "jme.swem.levels": "%s, %s, %s, %s",
+  "jme.swem.gender": "%s"
+}
