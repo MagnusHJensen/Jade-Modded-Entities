@@ -109,7 +109,7 @@ unifiedPublishing {
                 token = System.getenv("CURSEFORGE_TOKEN")
                 id = "1414723" // Required, must be a string, ID of CurseForge project
                 relations {
-                    optional "swemaddendum"
+                    optional "swem-addendum"
                 }
             }
         }
