@@ -4,6 +4,7 @@ import com.alaharranhonor.swem.forge.entities.horse.SWEMHorseEntity;
 import com.alaharranhonor.swem.forge.entities.horse.SWEMHorseEntityBase;
 import dk.magnusjensen.jademoddedentities.Constants;
 import dk.magnusjensen.jademoddedentities.integrations.JadeRegistration;
+import dk.magnusjensen.jademoddedentities.utilities.Utils;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.phys.Vec2;
@@ -21,6 +22,7 @@ public enum SWEMComponentProvider implements IEntityComponentProvider, JadeRegis
     private static final ResourceLocation UID = Constants.rl("swem");
     private static final ResourceLocation SWEM_LEVELS = Constants.rl("swem.levels");
     private static final ResourceLocation SWEM_GENDER = Constants.rl("swem.gender");
+    public static final ResourceLocation SWEM_COAT = Constants.rl("swem.coat");
     private static final ResourceLocation HIDE_DEFAULT = Constants.rl("swem.hide_default");
 
     @Override
@@ -32,6 +34,7 @@ public enum SWEMComponentProvider implements IEntityComponentProvider, JadeRegis
 
         this.addSWEMLevels(iTooltip, swemHorse, iPluginConfig, entityAccessor.showDetails());
         this.addSWEMGender(iTooltip, swemHorse, iPluginConfig);
+        this.addSWEMCoat(iTooltip, swemHorse, iPluginConfig);
     }
 
     public void addSWEMLevels(ITooltip tooltip, SWEMHorseEntityBase swemHorse, IPluginConfig config, boolean isDetailed) {
@@ -92,6 +95,15 @@ public enum SWEMComponentProvider implements IEntityComponentProvider, JadeRegis
         }
     }
 
+    public void addSWEMCoat(ITooltip tooltip, SWEMHorseEntityBase swemHorse, IPluginConfig config) {
+        if (!config.get(SWEM_COAT)) {
+            return;
+        }
+
+        var coatId = swemHorse.getCoatBehavior().coat().id().getPath();
+        tooltip.add(Component.literal(Utils.titleCase(coatId)), SWEM_COAT);
+    }
+
     @Override
     public ResourceLocation getUid() {
         return UID;
@@ -102,6 +114,7 @@ public enum SWEMComponentProvider implements IEntityComponentProvider, JadeRegis
         registration.registerEntityComponent(INSTANCE, SWEMHorseEntity.class);
         registration.addConfig(SWEM_LEVELS, true);
         registration.addConfig(SWEM_GENDER, true);
+        registration.addConfig(SWEM_COAT, true);
         registration.addConfig(HIDE_DEFAULT, true);
 
         registration.addTooltipCollectedCallback((iTooltip, accessor) -> {

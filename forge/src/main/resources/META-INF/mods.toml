@@ -41,3 +41,9 @@ mandatory = false
 versionRange = "${swem_version_range}"
 ordering = "NONE"
 side = "BOTH"
+[[dependencies.${mod_id}]]
+modId = "swemaddendum"
+mandatory = false
+versionRange = "${swemaddendum_version_range}"
+ordering = "NONE"
+side = "BOTH"

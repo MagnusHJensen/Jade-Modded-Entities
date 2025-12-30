@@ -105,6 +105,7 @@ processResources {
             'jade_fabric_version_range'    : jade_fabric_version_range,
 
             'swem_version_range'          : swem_version_range,
+            'swemaddendum_version_range'   : swemaddendum_version_range,
     ]
 
     var jsonExpandProps = expandProps.collectEntries {

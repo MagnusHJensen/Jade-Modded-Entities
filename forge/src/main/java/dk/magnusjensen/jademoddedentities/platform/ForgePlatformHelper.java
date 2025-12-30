@@ -1,6 +1,7 @@
 package dk.magnusjensen.jademoddedentities.platform;
 
 import dk.magnusjensen.jademoddedentities.integrations.swem.SWEMComponentProvider;
+import dk.magnusjensen.jademoddedentities.integrations.swemaddendum.SWEMAddendumComponentProvider;
 import dk.magnusjensen.jademoddedentities.platform.services.IPlatformHelper;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
@@ -31,12 +32,20 @@ public class ForgePlatformHelper implements IPlatformHelper {
         if (isModLoaded("swem")) {
             SWEMComponentProvider.INSTANCE.init(registration);
         }
+
+        if (isModLoaded("swemaddendum")) {
+            SWEMAddendumComponentProvider.INSTANCE.init(registration);
+        }
     }
 
     @Override
     public void registerClientIntegrations(IWailaClientRegistration registration) {
         if (isModLoaded("swem")) {
             SWEMComponentProvider.INSTANCE.initClient(registration);
+        }
+
+        if (isModLoaded("swemaddendum")) {
+            SWEMAddendumComponentProvider.INSTANCE.initClient(registration);
         }
     }
 }

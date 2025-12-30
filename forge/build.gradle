@@ -69,6 +69,8 @@ dependencies {
     modImplementation "curse.maven:swem-582697:6739081"
     modImplementation "maven.modrinth:geckolib:4.8.2-forge,1.20.1"
     modImplementation "maven.modrinth:playeranimator:1.0.2-rc1+1.20-forge"
+
+    modImplementation "curse.maven:swem_addendum-1164205:7039235"
 }
 
 jar {
@@ -106,6 +108,9 @@ unifiedPublishing {
             curseforge {
                 token = System.getenv("CURSEFORGE_TOKEN")
                 id = "1414723" // Required, must be a string, ID of CurseForge project
+                relations {
+                    optional "swemaddendum"
+                }
             }
         }
 
