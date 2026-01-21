@@ -1,6 +1,6 @@
 {
     "schemaVersion": 1,
-    "id": "${mod_id}",
+    "id": "jademoddedentities",
     "version": "${version}",
     "name": "${mod_name}",
     "description": "${description}",
@@ -17,6 +17,9 @@
     "entrypoints": {
         "main": [
             "dk.magnusjensen.jademoddedentities.FabricJadeModdedEntities"
+        ],
+        "jade": [
+            "dk.magnusjensen.jademoddedentities.JadeModdedEntitiesPlugin"
         ]
     },
     "mixins": [

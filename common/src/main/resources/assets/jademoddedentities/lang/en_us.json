@@ -4,9 +4,12 @@
   "config.jade.plugin_jademoddedentities.swem.gender": "Show gender",
   "config.jade.plugin_jademoddedentities.swem.coat": "Show coat",
   "config.jade.plugin_jademoddedentities.swem.hide_default": "Hide Minecraft defaults",
+  "jme.swem.levels": "%s, %s, %s, %s",
+  "jme.swem.gender": "%s",
 
   "config.jade.plugin_jademoddedentities.swemaddendum": "SWEM Addendum",
 
-  "jme.swem.levels": "%s, %s, %s, %s",
-  "jme.swem.gender": "%s"
+  "config.jade.plugin_jademoddedentities.villager": "Villagers",
+  "jme.villager.breeding": "Breding CD: %s"
+
 }
