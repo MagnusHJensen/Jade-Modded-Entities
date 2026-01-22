@@ -1,0 +1,25 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:white_bed": 3
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 3039,
+      "minecraft:walk_one_cm": 1751,
+      "minecraft:total_world_time": 9407,
+      "minecraft:leave_game": 2,
+      "minecraft:fly_one_cm": 1382,
+      "minecraft:crouch_one_cm": 131,
+      "minecraft:sneak_time": 41,
+      "minecraft:play_time": 3039,
+      "minecraft:jump": 2,
+      "minecraft:time_since_death": 3039,
+      "minecraft:drop": 2
+    },
+    "minecraft:dropped": {
+      "minecraft:carrot": 64,
+      "minecraft:bread": 64
+    }
+  },
+  "DataVersion": 4671
+}

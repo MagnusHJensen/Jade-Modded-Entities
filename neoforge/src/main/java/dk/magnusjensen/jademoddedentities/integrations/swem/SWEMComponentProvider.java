@@ -4,26 +4,21 @@ package dk.magnusjensen.jademoddedentities.integrations.swem;
 import com.alaharranhonor.swem.forge.entities.horse.SWEMHorseEntityBase;*/
 import dk.magnusjensen.jademoddedentities.Constants;
 import dk.magnusjensen.jademoddedentities.integrations.JadeRegistration;
-import dk.magnusjensen.jademoddedentities.utilities.Utils;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.phys.Vec2;
+import net.minecraft.resources.Identifier;
 import snownee.jade.api.*;
 import snownee.jade.api.config.IPluginConfig;
-import snownee.jade.api.config.IWailaConfig;
 //import snownee.jade.impl.ui.IconElement;
-import snownee.jade.impl.ui.TextElement;
 //import snownee.jade.overlay.IconUI;
 
 public enum SWEMComponentProvider implements IEntityComponentProvider, JadeRegistration {
     INSTANCE;
 
 
-    private static final ResourceLocation UID = Constants.rl("swem");
-    private static final ResourceLocation SWEM_LEVELS = Constants.rl("swem.levels");
-    private static final ResourceLocation SWEM_GENDER = Constants.rl("swem.gender");
-    public static final ResourceLocation SWEM_COAT = Constants.rl("swem.coat");
-    private static final ResourceLocation HIDE_DEFAULT = Constants.rl("swem.hide_default");
+    private static final Identifier UID = Constants.rl("swem");
+    private static final Identifier SWEM_LEVELS = Constants.rl("swem.levels");
+    private static final Identifier SWEM_GENDER = Constants.rl("swem.gender");
+    public static final Identifier SWEM_COAT = Constants.rl("swem.coat");
+    private static final Identifier HIDE_DEFAULT = Constants.rl("swem.hide_default");
 
     @Override
     public void appendTooltip(ITooltip iTooltip, EntityAccessor entityAccessor, IPluginConfig iPluginConfig) {
@@ -105,7 +100,7 @@ public enum SWEMComponentProvider implements IEntityComponentProvider, JadeRegis
     }
 
     @Override
-    public ResourceLocation getUid() {
+    public Identifier getUid() {
         return UID;
     }
 

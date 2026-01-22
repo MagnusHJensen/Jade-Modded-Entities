@@ -1,0 +1,36 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:carrot": 192,
+      "minecraft:potato": 253,
+      "minecraft:beetroot": 192,
+      "minecraft:bread": 194
+    },
+    "minecraft:used": {
+      "minecraft:anvil": 2,
+      "minecraft:white_bed": 7
+    },
+    "minecraft:custom": {
+      "minecraft:talked_to_villager": 8,
+      "minecraft:time_since_rest": 12084,
+      "minecraft:walk_one_cm": 10372,
+      "minecraft:leave_game": 2,
+      "minecraft:play_time": 12084,
+      "minecraft:damage_dealt": 10,
+      "minecraft:jump": 11,
+      "minecraft:time_since_death": 12084,
+      "minecraft:drop": 98,
+      "minecraft:total_world_time": 12164,
+      "minecraft:fly_one_cm": 1417,
+      "minecraft:crouch_one_cm": 1240,
+      "minecraft:sneak_time": 628
+    },
+    "minecraft:dropped": {
+      "minecraft:potato": 381,
+      "minecraft:carrot": 256,
+      "minecraft:beetroot": 256,
+      "minecraft:bread": 259
+    }
+  },
+  "DataVersion": 4671
+}

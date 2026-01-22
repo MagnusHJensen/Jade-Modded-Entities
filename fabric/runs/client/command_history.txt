@@ -1,1 +1,10 @@
 /summon minecraft:villager
+/gamerule mob_griefing
+/data get entity 907d4f4c-37da-4592-ba41-6ec725b3b7bb
+/summon minecraft:villager
+/gamerule mob_griefing false
+/gamerule mob_griefing true
+/tick rate 100
+/tick rate 20
+/time set day
+/summon minecraft:villager

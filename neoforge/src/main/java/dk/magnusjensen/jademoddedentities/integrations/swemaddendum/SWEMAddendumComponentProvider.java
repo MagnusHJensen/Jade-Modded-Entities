@@ -6,14 +6,14 @@ import dk.magnusjensen.jademoddedentities.integrations.JadeRegistration;
 import dk.magnusjensen.jademoddedentities.integrations.swem.SWEMComponentProvider;
 import dk.magnusjensen.jademoddedentities.utilities.Utils;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import snownee.jade.api.*;
 import snownee.jade.api.config.IPluginConfig;
 
 public enum SWEMAddendumComponentProvider implements IEntityComponentProvider, JadeRegistration {
     INSTANCE;
 
-    private static final ResourceLocation UID = Constants.rl("swemaddendum");
+    private static final Identifier UID = Constants.rl("swemaddendum");
 
 
     @Override
@@ -42,7 +42,7 @@ public enum SWEMAddendumComponentProvider implements IEntityComponentProvider, J
     }
 
     @Override
-    public ResourceLocation getUid() {
+    public Identifier getUid() {
         return UID;
     }
 }
