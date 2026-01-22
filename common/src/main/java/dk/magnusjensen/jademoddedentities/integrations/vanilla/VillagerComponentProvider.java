@@ -33,7 +33,7 @@ public enum VillagerComponentProvider implements IEntityComponentProvider, IServ
         if (entityAccessor.getServerData().contains("BreedingCD", 3)) {
             int time = entityAccessor.getServerData().getInt("BreedingCD");
             if (time > 0) {
-                iTooltip.add(Component.translatable("jme.villager.breeding", IThemeHelper.get().seconds(time)));
+                iTooltip.add(Component.translatable("jme.villager.breeding", IThemeHelper.get().seconds(time, entityAccessor.tickRate())));
             }
 
         }

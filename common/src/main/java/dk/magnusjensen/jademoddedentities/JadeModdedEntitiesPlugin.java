@@ -2,8 +2,6 @@ package dk.magnusjensen.jademoddedentities;
 
 import dk.magnusjensen.jademoddedentities.integrations.vanilla.VillagerComponentProvider;
 import dk.magnusjensen.jademoddedentities.platform.Services;
-import net.minecraft.world.entity.npc.Villager;
-import snownee.jade.addon.vanilla.MobBreedingProvider;
 import snownee.jade.api.IWailaClientRegistration;
 import snownee.jade.api.IWailaCommonRegistration;
 import snownee.jade.api.IWailaPlugin;
