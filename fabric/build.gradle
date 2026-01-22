@@ -61,7 +61,7 @@ unifiedPublishing {
         gameVersions = ["1.21.1"]
         gameLoaders = ["fabric"]
 
-//        mainPublication tasks.named('remapJar', Jar).flatMap { it.archiveFile } // Declares the publicated jar
+        mainPublication tasks.named('remapJar').flatMap { it.archiveFile } // Declares the publicated jar
 
         relations {
             depends {
