@@ -13,6 +13,10 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven {
+        name = "Fuzs Mod Resources"
+        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+    }
 }
 
 dependencies {
@@ -25,6 +29,10 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
     modImplementation "maven.modrinth:jade:${jade_version}+fabric"
+
+    // Doggy Talents Next
+    modImplementation "maven.modrinth:doggy-talents-next:1.18.63-fabric,1.21.1"
+    modApi "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:21.1.6"
 }
 
 loom {
@@ -68,10 +76,14 @@ unifiedPublishing {
                 curseforge = "jade"
                 modrinth = "jade"
             }
-            /*optional {
+            optional {
                 curseforge = "swem"
                 modrinth = "swem"
-            }*/
+            }
+            optional {
+                curseforge = "doggy-talents-next"
+                modrinth = "doggy-talents-next"
+            }
         }
 
         var cfToken = System.getenv("CURSEFORGE_TOKEN")

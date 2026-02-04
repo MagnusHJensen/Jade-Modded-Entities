@@ -1,3 +1,3 @@
-# 1.2.0 - 1.21.1
+# 1.3.0 - 1.20.1
 
-- Added Villager breeding cooldown
+- Added support for Doggy Talents Next

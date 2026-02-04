@@ -66,7 +66,11 @@ dependencies {
     //modImplementation "maven.modrinth:geckolib:4.8.2-forge,1.20.1"
     //modImplementation "maven.modrinth:playeranimator:1.0.2-rc1+1.20-forge"
 
+    // SWEM Addendum
     //modImplementation "curse.maven:swem_addendum-1164205:7039235"
+
+    // Doggy Talents Next
+    implementation "maven.modrinth:doggy-talents-next:1.18.64-neoforge,1.21.1"
 }
 
 unifiedPublishing {
@@ -86,10 +90,14 @@ unifiedPublishing {
                 curseforge = "jade"
                 modrinth = "jade"
             }
-            /*optional {
+            optional {
                 curseforge = "swem"
                 modrinth = "swem"
-            }*/
+            }
+            optional {
+                curseforge = "doggy-talents-next"
+                modrinth = "doggy-talents-next"
+            }
         }
 
         var cfToken = System.getenv("CURSEFORGE_TOKEN")
@@ -97,9 +105,9 @@ unifiedPublishing {
             curseforge {
                 token = System.getenv("CURSEFORGE_TOKEN")
                 id = "1414723" // Required, must be a string, ID of CurseForge project
-                /*relations {
+                relations {
                     optional "swem-addendum"
-                }*/
+                }
             }
         }
 

@@ -11,6 +11,9 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 neoForge {
@@ -34,6 +37,8 @@ dependencies {
 
     // Pull forge version of Jade here
     compileOnly "maven.modrinth:jade:${jade_version}+neoforge"
+
+    compileOnly "blank:DoggyTalentsNext-1.21.1:1.18.31-api"
 }
 
 configurations {
