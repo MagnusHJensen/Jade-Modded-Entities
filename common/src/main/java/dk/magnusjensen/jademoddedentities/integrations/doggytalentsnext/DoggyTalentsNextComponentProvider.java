@@ -3,9 +3,6 @@ package dk.magnusjensen.jademoddedentities.integrations.doggytalentsnext;
 import dk.magnusjensen.jademoddedentities.Constants;
 import dk.magnusjensen.jademoddedentities.integrations.JadeRegistration;
 import dk.magnusjensen.jademoddedentities.utilities.Utils;
-import doggytalents.api.feature.DogLevel;
-import doggytalents.api.feature.IDog;
-import doggytalents.api.inferface.AbstractDog;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import snownee.jade.api.*;
@@ -20,7 +17,7 @@ public enum DoggyTalentsNextComponentProvider implements IEntityComponentProvide
 
     @Override
     public void initClient(IWailaClientRegistration registration) {
-        registration.registerEntityComponent(INSTANCE, AbstractDog.class);
+        //registration.registerEntityComponent(INSTANCE, AbstractDog.class);
     }
 
     @Override
@@ -30,7 +27,7 @@ public enum DoggyTalentsNextComponentProvider implements IEntityComponentProvide
 
     @Override
     public void appendTooltip(ITooltip iTooltip, EntityAccessor entityAccessor, IPluginConfig iPluginConfig) {
-        var dog = (IDog) entityAccessor.getEntity();
+        /*var dog = (IDog) entityAccessor.getEntity();
 
         iTooltip.add(Component.literal("Gender: ").append(dog.getDog().getGenderName()));
         iTooltip.add(Component.literal("Levels "));
@@ -39,7 +36,7 @@ public enum DoggyTalentsNextComponentProvider implements IEntityComponentProvide
             String firstChar = Utils.titleCase(type.getName()).substring(0, 1);
             iTooltip.append(Component.literal(firstChar + ": ").append(IThemeHelper.get().info(level)).append(" "));
         }
-        iTooltip.add(Component.literal("Mode: ").append(Component.translatable(dog.getDog().getMode().getUnlocalisedName())));
+        iTooltip.add(Component.literal("Mode: ").append(Component.translatable(dog.getDog().getMode().getUnlocalisedName())));*/
     }
 
     @Override
