@@ -27,6 +27,10 @@ dependencies {
     implementation project(":common")
 
     modImplementation "maven.modrinth:jade:${jade_version}+fabric"
+
+    // Doggy Talents Next
+    modImplementation "maven.modrinth:doggy-talents-next:1.18.32-fabric,1.20.1"
+    modImplementation "maven.modrinth:forge-config-api-port:v8.0.3-1.20.1-Fabric"
 }
 
 loom {
@@ -72,6 +76,10 @@ unifiedPublishing {
             optional {
                 curseforge = "swem"
                 modrinth = "swem"
+            }
+            optional {
+                curseforge = "doggy-talents-next"
+                modrinth = "doggy-talents-next"
             }
         }
 

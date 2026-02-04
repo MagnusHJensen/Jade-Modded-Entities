@@ -70,7 +70,11 @@ dependencies {
     modImplementation "maven.modrinth:geckolib:4.8.2-forge,1.20.1"
     modImplementation "maven.modrinth:playeranimator:1.0.2-rc1+1.20-forge"
 
+    // SWEM Addendum
     modImplementation "curse.maven:swem_addendum-1164205:7039235"
+
+    // Doggy Talents Next
+    modImplementation "maven.modrinth:doggy-talents-next:1.18.64-forge,1.20.1"
 }
 
 jar {
@@ -100,6 +104,10 @@ unifiedPublishing {
             optional {
                 curseforge = "swem"
                 modrinth = "swem"
+            }
+            optional {
+                curseforge = "doggy-talents-next"
+                modrinth = "doggy-talents-next"
             }
         }
 
