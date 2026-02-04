@@ -1,5 +1,6 @@
 package dk.magnusjensen.jademoddedentities.platform;
 
+import dk.magnusjensen.jademoddedentities.integrations.doggytalentsnext.DoggyTalentsNextComponentProvider;
 import dk.magnusjensen.jademoddedentities.platform.services.IPlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
 import snownee.jade.api.IWailaClientRegistration;
@@ -26,11 +27,15 @@ public class FabricPlatformHelper implements IPlatformHelper {
 
     @Override
     public void registerIntegrations(IWailaCommonRegistration registration) {
-
+        if (isModLoaded("doggytalents")) {
+            DoggyTalentsNextComponentProvider.INSTANCE.init(registration);
+        }
     }
 
     @Override
     public void registerClientIntegrations(IWailaClientRegistration registration) {
-
+        if (isModLoaded("doggytalents")) {
+            DoggyTalentsNextComponentProvider.INSTANCE.initClient(registration);
+        }
     }
 }
