@@ -1,5 +1,6 @@
 package dk.magnusjensen.jademoddedentities.platform;
 
+import dk.magnusjensen.jademoddedentities.integrations.doggytalentsnext.DoggyTalentsNextComponentProvider;
 import dk.magnusjensen.jademoddedentities.integrations.swem.SWEMComponentProvider;
 import dk.magnusjensen.jademoddedentities.integrations.swemaddendum.SWEMAddendumComponentProvider;
 import dk.magnusjensen.jademoddedentities.platform.services.IPlatformHelper;
@@ -36,6 +37,10 @@ public class NeoForgePlatformHelper implements IPlatformHelper {
         if (isModLoaded("swemaddendum")) {
             SWEMAddendumComponentProvider.INSTANCE.init(registration);
         }
+
+        if (isModLoaded("doggytalents")) {
+            DoggyTalentsNextComponentProvider.INSTANCE.init(registration);
+        }
     }
 
     @Override
@@ -46,6 +51,10 @@ public class NeoForgePlatformHelper implements IPlatformHelper {
 
         if (isModLoaded("swemaddendum")) {
             SWEMAddendumComponentProvider.INSTANCE.initClient(registration);
+        }
+
+        if (isModLoaded("doggytalents")) {
+            DoggyTalentsNextComponentProvider.INSTANCE.initClient(registration);
         }
     }
 }

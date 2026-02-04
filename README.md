@@ -3,7 +3,8 @@
 A mod that adds support for displaying information from Jade on entities added by other mods.
 
 ## Supported Mods
-- [SWEM](https://www.curseforge.com/minecraft/mc-mods/swem)
+- [Doggy Talents Next](https://www.curseforge.com/minecraft/mc-mods/doggy-talents-next)
+- Villager breeding cooldown
 
 ## Wiki
 

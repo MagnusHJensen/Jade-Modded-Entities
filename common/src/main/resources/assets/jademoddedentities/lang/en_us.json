@@ -10,6 +10,7 @@
   "config.jade.plugin_jademoddedentities.swemaddendum": "SWEM Addendum",
 
   "config.jade.plugin_jademoddedentities.villager": "Villagers",
-  "jme.villager.breeding": "Breding CD: %s"
+  "jme.villager.breeding": "Breding CD: %s",
 
+  "config.jade.plugin_jademoddedentities.doggy_talents_next": "Doggy Talents Next"
 }
