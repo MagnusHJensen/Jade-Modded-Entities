@@ -1,7 +1,6 @@
 package dk.magnusjensen.jademoddedentities.integrations.swem;
 
-/*import com.alaharranhonor.swem.forge.entities.horse.SWEMHorseEntity;
-import com.alaharranhonor.swem.forge.entities.horse.SWEMHorseEntityBase;*/
+import com.alaharranhonor.swem.entity.horse.AbstractSwemHorse;
 import dk.magnusjensen.jademoddedentities.Constants;
 import dk.magnusjensen.jademoddedentities.integrations.JadeRegistration;
 import dk.magnusjensen.jademoddedentities.utilities.Utils;
@@ -11,9 +10,8 @@ import net.minecraft.world.phys.Vec2;
 import snownee.jade.api.*;
 import snownee.jade.api.config.IPluginConfig;
 import snownee.jade.api.config.IWailaConfig;
-//import snownee.jade.impl.ui.IconElement;
+import snownee.jade.impl.ui.HealthElement;
 import snownee.jade.impl.ui.TextElement;
-//import snownee.jade.overlay.IconUI;
 
 public enum SWEMComponentProvider implements IEntityComponentProvider, JadeRegistration {
     INSTANCE;
@@ -27,8 +25,8 @@ public enum SWEMComponentProvider implements IEntityComponentProvider, JadeRegis
 
     @Override
     public void appendTooltip(ITooltip iTooltip, EntityAccessor entityAccessor, IPluginConfig iPluginConfig) {
-        /*var entity = entityAccessor.getEntity();
-        if (!(entity instanceof SWEMHorseEntityBase swemHorse)) {
+        var entity = entityAccessor.getEntity();
+        if (!(entity instanceof AbstractSwemHorse swemHorse)) {
             return;
         }
 
@@ -37,7 +35,7 @@ public enum SWEMComponentProvider implements IEntityComponentProvider, JadeRegis
         this.addSWEMCoat(iTooltip, swemHorse, iPluginConfig);
     }
 
-    public void addSWEMLevels(ITooltip tooltip, SWEMHorseEntityBase swemHorse, IPluginConfig config, boolean isDetailed) {
+    public void addSWEMLevels(ITooltip tooltip, AbstractSwemHorse swemHorse, IPluginConfig config, boolean isDetailed) {
         if (!config.get(SWEM_LEVELS)) {
             return;
         }
@@ -68,13 +66,13 @@ public enum SWEMComponentProvider implements IEntityComponentProvider, JadeRegis
 
     }
 
-    public void addSWEMGender(ITooltip tooltip, SWEMHorseEntityBase swemHorse, IPluginConfig config) {
+    public void addSWEMGender(ITooltip tooltip, AbstractSwemHorse swemHorse, IPluginConfig config) {
         if (!config.get(SWEM_GENDER)) {
             return;
         }
-        var element = new Icon(IconUI.EMPTY_HEART);
+        var element = new HealthElement(1, 0);
         if (swemHorse.isInLove()) {
-            element = new IconElement(IconUI.HEART);
+            element = new HealthElement(1, 1);
         }
 
         tooltip.add(Component.translatable("jme.swem.gender", swemHorse.getBreeding().getName()));
@@ -95,13 +93,13 @@ public enum SWEMComponentProvider implements IEntityComponentProvider, JadeRegis
         }
     }
 
-    public void addSWEMCoat(ITooltip tooltip, SWEMHorseEntityBase swemHorse, IPluginConfig config) {
+    public void addSWEMCoat(ITooltip tooltip, AbstractSwemHorse swemHorse, IPluginConfig config) {
         if (!config.get(SWEM_COAT)) {
             return;
         }
 
         var coatId = swemHorse.getCoatBehavior().coat().id().getPath();
-        tooltip.add(Component.literal(Utils.titleCase(coatId)), SWEM_COAT); */
+        tooltip.add(Component.literal(Utils.titleCase(coatId)), SWEM_COAT);
     }
 
     @Override
@@ -111,7 +109,7 @@ public enum SWEMComponentProvider implements IEntityComponentProvider, JadeRegis
 
     @Override
     public void initClient(IWailaClientRegistration registration) {
-        //registration.registerEntityComponent(INSTANCE, SWEMHorseEntity.class);
+        registration.registerEntityComponent(INSTANCE, AbstractSwemHorse.class);
         registration.addConfig(SWEM_LEVELS, true);
         registration.addConfig(SWEM_GENDER, true);
         registration.addConfig(SWEM_COAT, true);
@@ -124,15 +122,15 @@ public enum SWEMComponentProvider implements IEntityComponentProvider, JadeRegis
 
             EntityAccessor entityAccessor = (EntityAccessor) accessor;
             var entity = entityAccessor.getEntity();
-            /*if (!(entity instanceof SWEMHorseEntityBase)) {
+            if (!(entity instanceof AbstractSwemHorse)) {
                 return;
             }
 
             if (IWailaConfig.get().getPlugin().get(HIDE_DEFAULT) && IWailaConfig.get().getPlugin().get(UID)) {
-                iTooltip.remove(Identifiers.MC_POTION_EFFECTS);
-                iTooltip.remove(Identifiers.MC_HORSE_STATS);
-                iTooltip.remove(Identifiers.MC_ENTITY_ARMOR);
-            }*/
+                iTooltip.getTooltip().remove(JadeIds.MC_POTION_EFFECTS);
+                iTooltip.getTooltip().remove(JadeIds.MC_HORSE_STATS);
+                iTooltip.getTooltip().remove(JadeIds.MC_ENTITY_ARMOR);
+            }
         });
     }
 

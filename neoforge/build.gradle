@@ -62,9 +62,9 @@ dependencies {
     // Mod compats
 
     // SWEM
-    //modImplementation "curse.maven:swem-582697:6739081"
-    //modImplementation "maven.modrinth:geckolib:4.8.2-forge,1.20.1"
-    //modImplementation "maven.modrinth:playeranimator:1.0.2-rc1+1.20-forge"
+    implementation "curse.maven:swem-582697:7582800"
+    implementation "maven.modrinth:geckolib:4.8.3-neoforge,1.21.1"
+    implementation "maven.modrinth:playeranimator:2.0.4+1.21.1-forge"
 
     // SWEM Addendum
     //modImplementation "curse.maven:swem_addendum-1164205:7039235"

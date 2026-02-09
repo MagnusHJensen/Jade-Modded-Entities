@@ -14,7 +14,6 @@ public class JadeModdedEntitiesPlugin implements IWailaPlugin {
         IWailaPlugin.super.register(registration);
 
         VillagerComponentProvider.INSTANCE.init(registration);
-        //DoggyTalentsNextComponentProvider.INSTANCE.init(registration);
 
         // We delegate registration to the individual component, to avoid loading class references of optional mods.
         Services.PLATFORM.registerIntegrations(registration);
@@ -25,7 +24,6 @@ public class JadeModdedEntitiesPlugin implements IWailaPlugin {
         IWailaPlugin.super.registerClient(registration);
 
         VillagerComponentProvider.INSTANCE.initClient(registration);
-        //DoggyTalentsNextComponentProvider.INSTANCE.initClient(registration);
 
         // We delegate registration to the individual component, to avoid loading class references of optional mods.
         Services.PLATFORM.registerClientIntegrations(registration);
