@@ -1,3 +1,3 @@
-# 1.3.0 - 1.20.1
+# 1.3.1 - 1.20.1
 
-- Added support for Doggy Talents Next
+- Fixed Forge build to work
